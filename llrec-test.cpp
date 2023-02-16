@@ -68,7 +68,9 @@ void dealloc(Node* head)
 // -----------------------------------------------
 
 
-
+struct removeOdd{
+    bool operator()(int x){return ((x%2)!=0);}
+};
 
 
 int main(int argc, char* argv[])
@@ -82,8 +84,17 @@ int main(int argc, char* argv[])
     // Feel free to update any code below this point
     // -----------------------------------------------
     Node* head = readList(argv[1]);
-    cout << "Original list: ";
     print(head);
+    removeOdd x;
+    head = llfilter(head,x);
+    print(head);
+    // Node* small;
+    // Node* large;
+    // llpivot(head, small, large, 9);
+    // print(small);
+    // print(large);
+
+    
 
     // Test out your linked list code
 

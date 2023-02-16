@@ -1,2 +1,5 @@
 *.o
 llrec-test
+test
+test.cpp
+hw3_tests/
